@@ -1,0 +1,267 @@
+%             Thesis of Fabio A. CRUZ SANCHEZ
+%             ------------------------------------------%
+% Fabio Cruz- Nancy, October 2015
+
+%----------------------------------------------------
+% 	CONFIGURATION OF PARAMETERS
+%----------------------------------------------------
+% Type of document: Book
+% -----------------
+
+\documentclass[a4paper,11pt]{book}
+%\documentclass[a4paper,11pt, onecolumn]{article}
+\usepackage[left=2cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry} 
+
+
+% ----------------
+%  FONTS AND TYPESETTING SETTINGS
+% -----------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+
+
+% ----------------
+%  STYLES OF THE CHAPTER, SECTION
+% -----------------
+
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Bjornstrup]{fncychap}
+
+
+
+% -----------------
+%  GRAPHICS
+% -----------------
+\usepackage{graphicx}	
+\usepackage{epstopdf}
+
+%---------------------------------
+% Modification du model de UL
+%\graphicspath{{./Figures/}} % chemin des figures
+
+
+% -----------------
+%  DEFINITION OF THE COLORS
+% -----------------
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{color} % Color
+\usepackage{colortbl}
+
+\definecolor{MainRed}{rgb}{.6, .1, .1}
+\definecolor{GoldDecoration}{RGB}{170, 120, 70}
+
+
+% -----------------
+%  PDF configuration
+% -----------------
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\hypersetup{pdfauthor= {Fabio A Cruz Sanchez}, 
+	pdftitle={Green Fablab},
+	colorlinks,
+	linkcolor=MidnightBlue,
+	linktoc=all,
+	pdfkeywords={Polymer Recycling,  PLA, RepRap, Open-Source Additive Manufacturing, 3D printing}
+}
+
+
+
+% -----------------
+% 	MATHEMATHICAL SYMBOLS
+% -----------------
+%\usepackage{amssymb} %% The amssymb package provides various useful mathematical symbols
+\usepackage{amsthm} %% The amsthm package provides extended theorem environments
+\usepackage{amsmath}  % Paqute de Matematicas
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%  AUTORS AND TITLE SECTION
+%----------------------------------------------------------------------------------------
+% title
+\usepackage{authblk}
+\title{Green FabLab Project:  proposition to valorise  polymer recycling in innovation spaces} 
+%titre
+%Proposition d'une approche méthodologique permettant d'évaluer le recyclage des polymères dans un contexte de fabrication additive open-source
+%\author{Fabio A Cruz Sanchez}
+
+\author[1]{Fabio Cruz\thanks{Electronic address: fabio-alberto.cruz-sanchez@univ-lorraine.fr}}
+\author[1]{Hakim Boudaoud}
+\author[2]{Sandrine Hoppe}
+\author[3]{Thibaut Roux-Marchand}
+\author[1]{Mauricio Camargo}
+\affil[1]{Équipe de Recherche sur les Processus Innovatifs (ERPI), Université de Lorraine}
+\affil[2]{Laboratoire Réactions et Génie des Procédés (LRGP), Université de Lorraine \\ Nancy, France}
+\affil[3]{CESI \\ Nancy, France}
+\date{}
+
+% -----------------
+%  BIBLIOGRAPHY
+% -----------------
+%\usepackage  {natbib}
+\usepackage{csquotes} %a utiliser si biblatex est utilisé
+\usepackage[style=numeric-comp, doi=false, backend=bibtex, isbn=false, url=false, sorting=none, language=english ]{biblatex}
+\addbibresource{library.bib}
+
+
+
+% -----------------
+%  VARIOUS PACKAGES FROM ME
+% -----------------
+\usepackage{minitoc}
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+%\usepackage[lofdepth,lotdepth]{subfig} 
+\usepackage{multirow} % Use multirows in the tables
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+\usepackage {textcomp} % (Symbols Euros)
+\usepackage{gensymb} % Paquete para hacer grados centigrados
+\usepackage{tablefootnote}
+\usepackage{nomencl} % nomenclature package
+\renewcommand{\nomname}{Notations}
+\usepackage{soul}
+\makenomenclature
+%\renewcommand\thesection{\arabic{section}} %Redefinition of numeration of the document
+\usepackage{pdflscape} % hacer el documento lanscape en las hojas
+\usepackage{enumitem} % offers ready-made options for eliminating the space between items and paragraphs within the list (noitemsep) or all vertical spacing (nosep): 
+
+\usepackage{caption}
+\usepackage[list=true]{subcaption}
+\usepackage{adjustbox} % rezise tables
+\usepackage{datetime}% For print the version of the document
+\usepackage{cleveref} % For multiple references insider the text
+\usepackage{longtable}
+\usepackage{epigraph}
+\usepackage{tabularx} %The tabularx tabular environment provides more alignment options, and has a width argument to specify the table width.
+\usepackage{tabu}
+\usepackage{afterpage} % For make blank pages
+\usepackage{pdfpages} % For insert the title page.
+
+\usepackage{tikz} % For making the circle of Polymers
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+% -----------------
+%  VARIOUS PACKAGES FROM UNIVERSITE DE LORRAINE
+% -----------------
+\usepackage{import}
+\usepackage[official]{eurosym} % (Symbols Euros )
+\usepackage{algorithm} %Mwrite code and algorithms
+\usepackage{algorithmic}
+
+
+%----------------------------------------------------------------------
+%  PERSONALIZATION OF PACKAGES
+%----------------------------------------------------------------------
+\usepackage{gantt}
+
+\setlist[itemize]{noitemsep}
+
+
+% -----------------
+%  DEFINITION OF COMMANDS BY ME
+% -----------------
+%Comando para Grados Celsius
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~} % For items inside a table
+\newcommand{\Celsius}{\degree\emph{C }}
+
+
+%\pagenumbering{Roman}
+
+
+
+
+\setlength\epigraphwidth{12cm}
+\setlength\epigraphrule{0pt}
+
+
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+%  DOCUMENT
+%-----------------------------------------------------------
+\begin{document}
+
+
+% Iinclude the Frontpage
+%\includepdf{Frontpage/frontpage.pdf}
+\maketitle
+
+
+
+\frontmatter
+
+%-------------------------------------------------------------------
+%  MINITABLES OF CONTENT PER CHAPTER
+%-------------------------------------------------------------------
+\dominitoc
+
+%-------------------------------------------------------------------
+%  REMERCIEMENTS OF THE THESIS
+%-------------------------------------------------------------------
+%\DontFrameThisInToc
+
+%-------------------------------------------------------------------
+%	 DEDICATION OF THE THESIS
+%-------------------------------------------------------------------
+
+
+
+%-------------------------------------------------------------------
+%	 TABLE OF CONTENTS
+%-------------------------------------------------------------------
+%Table of Contents
+
+%\import{./}{Chapters/Agradecimientos}  
+
+\tableofcontents
+\newpage
+
+% Table of Figures
+\listoffigures
+\newpage
+
+% List of Tables
+\listoftables
+\newpage
+
+
+\mainmatter
+
+
+ %-----------------------------------------------------------------
+ %	 CHAPTERS
+ %-----------------------------------------------------------------
+
+\import{./}{Chapters/1-Introduction}  
+\import{./}{Chapters/2-Research-Questions}  
+\import{./}{Chapters/3-Work-Done} 
+%%\import{./}{Chapters/4-Work-in-Progress} 
+%%\import{./}{Chapters/4-Work-in-Progress} 
+
+%\import{./}{Chapters/AI-ENSGSI} 
+
+
+
+
+%
+
+
+%-------------------------------------------------------------------
+%  PRINT THE BIBLIOGRAPHY
+%-------------------------------------------------------------------
+%\printbibliography %refereneces
+
+
+
+
+
+
+\end{document}
+
+
+
